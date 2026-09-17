@@ -1,0 +1,20 @@
+{
+  "name": "Host skills",
+  "description": "Claude Code skills shared by the Host team. Installable from DevFlow's Skills Marketplace.",
+  "skills": [
+    {
+      "name": "unslop",
+      "description": "Cut AI tells from any writing: puffery, AI vocabulary, em dashes, filler, sycophancy. Applies to chat replies, commit messages, comments, MR descriptions and docs.",
+      "version": "1.0.0",
+      "tags": ["writing", "style", "always-on"],
+      "author": "Ricardo Silva"
+    },
+    {
+      "name": "poteto-mode",
+      "description": "poteto's agent style: concise detailed responses, deliberate subagents, unslopped prose, simple code and verified work. Invoke with /poteto-mode. Ships playbooks (bug fix, babysit, autopilot, eval) and helper scripts.",
+      "version": "1.0.0",
+      "tags": ["workflow", "agent-style", "playbooks"],
+      "author": "Ricardo Silva"
+    }
+  ]
+}
