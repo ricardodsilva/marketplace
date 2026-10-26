@@ -18,13 +18,14 @@ Default org `primary`, project `Core-Host PMS`, through the devflow `ado_*` tool
 ## Steps
 
 1. **Read everything.** `ado_get_work_item` with `includeComments: true`. Read every HTML field with content: `System.Description`, `Microsoft.VSTS.TCM.ReproSteps`, `Microsoft.VSTS.Common.AcceptanceCriteria`, `Custom.DeveloperNotes`, and any other `Custom.*` text field. Open every `<img>` and every image `AttachedFile` with `ado_get_attachment`; on short items written by a person, the images often are the request. Get the titles and states of the linked items (parent, predecessors, related) with one `ado_query_work_items` call on their ids. Done when every field, comment, image and link is in hand.
-2. **Sort** each piece with the map below into exactly one digest section or the cut list.
-3. **Write** the digest in the template, in the language of the request. Quote the item verbatim only for error messages, screen labels, parameter values and a tester's rejection. Every dash that joins clauses becomes a comma or a period, inside quotes too.
+2. **Sort** each piece with the map below into exactly one digest section or the cut list. A sentence you keep loses every pattern the `unslop` skill lists.
+3. **Write** the digest in the template, in the language of the request. Quote the item verbatim only for error messages, screen labels, parameter values and a tester's rejection. Write it by the `unslop` skill, quotes included. A quote keeps the item's words and takes unslop's punctuation.
 4. **Check** before sending:
    - every acceptance criterion is a line in **Testar**; merge duplicates, drop none;
    - every open question, MEDIUM or LOW grounding note, blocking dependency, and contradiction is in **Em aberto**. A contradiction is two places promising different behaviour. Differing metadata (Effort against SP), the template's fixed headings, and text that was true when written are not;
    - every sentence traces to the item, its images or its links' titles; the example uses the item's own numbers, or says "exemplo ilustrativo";
-   - the part above **Testar**, header and labels included, stays under 150 words.
+   - the part above **Testar**, header and labels included, stays under 150 words;
+   - unslop's self-audit question finds nothing left to fix.
 
 ## Sort map
 
@@ -71,7 +72,7 @@ Omit a section that has nothing. Em aberto always appears; when empty it reads "
 
 **Estado.** <latest rejection verbatim, MR, what is missing>
 
-_Lido: <fields read>, <n> comentários (<n> bots), <n> imagens, <n> itens ligados. Cortado: <cut-list sections; count the grounding notes>._
+_Lido: <fields read>, <n> comentários, <n> de bots, <n> imagens, <n> itens ligados. Cortado: <cut-list sections; count the grounding notes>._
 ```
 
 ## Survey (Epic or Feature)
