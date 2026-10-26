@@ -19,7 +19,7 @@
     {
       "name": "deslop",
       "description": "Digest a slop-heavy Azure DevOps work item into a two-minute read: problem, change, worked example, rules, test list and open points. Also surveys an Epic or Feature. Read-only. Invoke with /deslop AB#<id>.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "tags": ["azure-devops", "work-items", "reading"],
       "author": "Ricardo Silva"
     }
